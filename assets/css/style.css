@@ -1,0 +1,51 @@
+:root{
+    /* color theme */
+    --text: rgb(34, 139, 34);
+    --text2: rgb(242 242 12);
+    --background: rgb(12, 22, 0);
+    --border: rgb(122, 218, 32);
+    --glow:  rgb(0, 236, 102);
+    --gradient1:  rgb(158, 46, 29);
+    --gradient2: rgb(155, 155, 9);
+    --gradient3: rgb(52, 153, 160);
+}
+
+/* Body will be primary background and text formatting */
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+/* all item in header are evenly spaced and centered vertically within container */
+header {
+    /* formating centering nested elements */
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    /* visuals */
+    border-bottom: 15px double var(--gradient3);
+    background-color: var(--gradient2);
+    background-image: linear-gradient(
+        var(--gradient1),
+        /* var(--gradient2), */
+        var(--gradient3));
+}
+/* Elements within header || Potential consolidation? */
+h1{
+    font-size: 45px;
+    color: var(--text2);
+}
+ul{
+    display: flex;
+    /* flex-direction: column;      done when on phone screen*/
+}
+ul li {
+    padding: 10px;
+}
+ul li a{
+    font-size: 20px;
+    color: var(--text2);
+}
