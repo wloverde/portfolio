@@ -1,8 +1,8 @@
 :root{
     /* color theme */
-    --text: rgb(34, 139, 34);
+    --text: rgb(218, 165, 32);
     --text2: rgb(242 242 12);
-    --background: rgb(12, 22, 0);
+    --background: rgb(56, 56, 56);
     --border: rgb(122, 218, 32);
     --glow:  rgb(0, 236, 102);
     --gradient1:  rgb(158, 46, 29);
@@ -37,6 +37,22 @@ header {
 h1{
     font-size: 45px;
     color: var(--text2);
+}
+
+/* similar format to header, inversed gradiant and border */
+footer{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    /* visuals */
+    border-top: 15px double var(--gradient3);
+    background-color: var(--gradient2);
+    background-image: linear-gradient(
+        var(--gradient3),
+        /* var(--gradient2), */
+        var(--gradient1));
 }
 ul{
     display: flex;
