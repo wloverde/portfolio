@@ -1,13 +1,16 @@
 :root{
     /* color theme */
-    --text: rgb(218, 165, 32);
-    --text2: rgb(242 242 12);
-    --background: rgb(56, 56, 56);
-    --border: rgb(122, 218, 32);
-    --glow:  rgb(0, 236, 102);
-    --gradient1:  rgb(158, 46, 29);
-    --gradient2: rgb(221, 221, 17);
-    --gradient3: rgb(52, 153, 160);
+    --text: #8b8477;
+    --text2: #ffa600;
+    --background: ##003f5c;
+    --border: #ffa600;
+    --glow:  #ff6361;
+    --gradient1: #853c0f;
+    --gradient2: #58508d;
+    --gradient3: #003f5c;
+
+    /* grid dimentions */
+    --gridwidth: 95%;
 }
 
 /* Body will be primary background and text formatting */
@@ -28,10 +31,10 @@ header {
     /* visuals */
     border-bottom: 15px double var(--gradient3);
     background-color: var(--gradient2);
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
         var(--gradient1),
-        /* var(--gradient2), */
-        var(--gradient3));
+        var(--gradient2),
+        var(--gradient3));  */
 }
 /* Elements within header || Potential consolidation? */
 h1{
@@ -48,11 +51,11 @@ footer{
     padding: 15px 0;
     /* visuals */
     border-top: 15px double var(--gradient3);
-
-    background-image: linear-gradient(
+    background-color: var(--gradient2);
+    /* background-image: linear-gradient(
         var(--gradient3),
-        /* var(--gradient2), */
-        var(--gradient1));
+        var(--gradient2),
+        var(--gradient1)); */
 }
 /* formating for header and footer lists */
 ul{
@@ -71,8 +74,9 @@ main{
     background-color: var(--gradient3);
 }
 
-/* h2 header used for left alignment, border right used as divider */
+/* h2 header used for left, border right used as divider */
 h2{
+    color: var(--text2);
     min-width: 150px;
     font-size: 30px;
     border-right: 7px groove var(--gradient2) ;
@@ -83,9 +87,67 @@ h2{
 /* used to set alignment between header and content of the section */
 section{
     display: flex;
-
+}
+.card{
+    border: 3px groove  var(--border);
+    margin: 3%;
+    padding: 10px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px,1fr)); 
+}
+/* background image for project link cards */
+#csstips{
+    height: 300px;
+    width: var(--gridwidth);
+    margin: 25px;
+    background-image: url("../images/csstips.gif");
+    background-size: cover;
+    background-position: center;
+}
+#studyguide {
+    height: 300px;
+    width: var(--gridwidth);
+    margin: 25px;
+    background-image: url("../images/studyguide.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+#landing{
+    height: 300px;
+    width: var(--gridwidth);
+    margin: 25px;
+    background-image: url("../images/landing.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#horiseon{
+    height: 300px;
+    width: var(--gridwidth);
+    margin: 25px;
+    background-image: url("../images/horiseon.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#rpgsheet  {
+    height: 800px;
+    width: 1fr;
+    margin: 25px;
+    background-image: url("../images/rpgsheet.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
+/* project link card header cards */
+h3 {
+    background-color: var(--border);
+    border: 5px double var(--border);
+    width: fit-content;
+    font-size: larger;
+}
+
+/* adds additional space between paragraph elements */
 p {
     padding: 5px;
 }
