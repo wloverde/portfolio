@@ -88,66 +88,79 @@ h2{
 section{
     display: flex;
 }
+section div{
+    width: 100%;
+}
 .card{
     border: 3px groove  var(--border);
-    margin: 3%;
-    padding: 10px;
+    margin: 10px;
+    width: max-content;
+    height: 300px;
+    width: var(--gridwidth);
+    background-size: cover;
+    background-position: center;
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px,1fr)); 
+    grid-template-columns: repeat(2, minmax(350px,auto));
+    column-gap: 10px; 
 }
 /* background image for project link cards */
 #csstips{
-    height: 300px;
-    width: var(--gridwidth);
-    margin: 25px;
     background-image: url("../images/csstips.gif");
-    background-size: cover;
-    background-position: center;
 }
 #studyguide {
-    height: 300px;
-    width: var(--gridwidth);
-    margin: 25px;
     background-image: url("../images/studyguide.jpeg");
-    background-size: cover;
-    background-position: center;
 }
 #landing{
-    height: 300px;
-    width: var(--gridwidth);
-    margin: 25px;
     background-image: url("../images/landing.jpg");
-    background-size: cover;
-    background-position: center;
 }
 #horiseon{
-    height: 300px;
-    width: var(--gridwidth);
-    margin: 25px;
     background-image: url("../images/horiseon.jpg");
-    background-size: cover;
-    background-position: center;
 }
 #rpgsheet  {
-    height: 800px;
-    width: 1fr;
-    margin: 25px;
     background-image: url("../images/rpgsheet.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
 /* project link card header cards */
-h3 {
+h3, h4{
     background-color: var(--border);
     border: 5px double var(--border);
     width: fit-content;
     font-size: larger;
+    position: relative;
+    margin-top: 225px;
+    margin-left: 0px;
+}
+/* hide secondary header when NOT hovered */
+h4{
+    font-size: small;
+    margin-top: -23px;
+    z-index: 0;
 }
 
 /* adds additional space between paragraph elements */
 p {
     padding: 5px;
+}
+/* Modify to show sub header when hover over card */
+.card:hover{
+    h4{
+        transition: (margin-top:0) 0.5s; 
+    }
+}
+/* Change screen format based of resolution with Media Query  */
+@media screen and (max-width: 992px) {
+    ul{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid{
+        grid-template-columns: repeat(1, 100%);
+    }
+    ul{
+        flex-direction: column;
+    }
 }
