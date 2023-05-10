@@ -92,13 +92,18 @@ section div{
     width: 100%;
 }
 .card{
-    border: 3px groove  var(--border);
-    margin: 10px;
-    width: max-content;
-    height: 300px;
-    width: var(--gridwidth);
+    width: 100%;
+    height: 250px;
     background-size: cover;
     background-position: center;
+    border: 3px groove var(--border);
+    color: var(--gradient3);
+    margin: 10px;
+    /* flexbox for a glow tranistion on hover */
+    /* display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+    flex: 1 0 200px; */
 }
 .grid {
     display: grid;
@@ -122,21 +127,22 @@ section div{
     background-image: url("../images/rpgsheet.jpg");
 }
 
+
 /* project link card header cards */
 h3, h4{
     background-color: var(--border);
     border: 5px double var(--border);
-    width: fit-content;
+    width: 225px;
     font-size: larger;
     position: relative;
-    margin-top: 225px;
+    /* margin-top: -29px; */
     margin-left: 0px;
 }
+
 /* hide secondary header when NOT hovered */
 h4{
-    font-size: small;
-    margin-top: -23px;
-    z-index: 0;
+   margin-top: 180px;
+   transition: all 0.5s ease-in-out;
 }
 
 /* adds additional space between paragraph elements */
@@ -144,10 +150,9 @@ p {
     padding: 5px;
 }
 /* Modify to show sub header when hover over card */
-.card:hover{
-    h4{
-        transition: (margin-top:0) 0.5s; 
-    }
+a:hover,
+a:focus{
+    
 }
 /* Change screen format based of resolution with Media Query  */
 @media screen and (max-width: 992px) {
