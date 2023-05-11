@@ -90,6 +90,7 @@ section{
 }
 section div{
     width: 100%;
+    padding-right: 2rem;
 }
 .card{
     width: 100%;
@@ -99,7 +100,7 @@ section div{
     border: 3px groove var(--border);
     color: var(--gradient3);
     margin: 10px;
-    /* flexbox for a glow tranistion on hover */
+    /* flexbox for a glow tranistion on hover  |||flexbox is breaking window scroll wheel on Edge|||*/
     /* display: flex;
     flex-flow: wrap;
     flex-direction: column;
